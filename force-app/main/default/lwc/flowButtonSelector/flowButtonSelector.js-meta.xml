@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Flow Button Selector</masterLabel>
+    <description>Horizontal button selector for single or multi-select in Screen Flows</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="buttonLabels" type="String[]" label="Button Labels" role="inputOnly" required="true"/>
+            <property name="buttonValues" type="String[]" label="Button Values" role="inputOnly" required="true"/>
+            <property name="buttonLabels2" type="String[]" label="Secondary Labels (Optional)" role="inputOnly"/>
+            <property name="allowMultiSelect" type="Boolean" label="Allow Multiple Selections" default="false"/>
+            <property name="preSelectedValues" type="String[]" label="Pre-Selected Values" role="inputOnly"/>
+            <property name="selectedValues" type="String[]" label="Selected Values (Collection)" role="outputOnly"/>
+            <property name="selectedValue" type="String" label="Selected Value (Single)" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

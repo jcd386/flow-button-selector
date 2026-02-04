@@ -1,0 +1,21 @@
+<template>
+    <div class="button-container">
+        <template for:each={buttons} for:item="button">
+            <button
+                key={button.key}
+                class={button.buttonClass}
+                data-value={button.value}
+                aria-pressed={button.ariaPressed}
+                onclick={handleButtonClick}
+            >
+                <template if:false={button.hasDualLabels}>
+                    <span class="label-centered">{button.label}</span>
+                </template>
+                <template if:true={button.hasDualLabels}>
+                    <span class="label-left">{button.label}</span>
+                    <span class="label-right">{button.label2}</span>
+                </template>
+            </button>
+        </template>
+    </div>
+</template>

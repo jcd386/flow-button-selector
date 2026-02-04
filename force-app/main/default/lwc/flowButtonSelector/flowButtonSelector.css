@@ -1,0 +1,40 @@
+/* Container for horizontal button layout with wrapping */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+/* Base button styling */
+.button-item {
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Centered label (single label mode) */
+.label-centered {
+    display: block;
+    text-align: center;
+}
+
+/* Dual label layout - using explicit class for browser compatibility */
+.dual-label {
+    display: inline-flex;
+    justify-content: space-between;
+    min-width: 140px;
+    gap: 1rem;
+}
+
+.label-left {
+    text-align: left;
+}
+
+.label-right {
+    text-align: right;
+}
+
+/* Ensure selected state has good contrast */
+.slds-button_brand {
+    font-weight: 500;
+}
